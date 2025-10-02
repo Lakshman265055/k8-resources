@@ -5,5 +5,3 @@ metadata:
   labels:
     project: expense
     environment: dev
-    
-
