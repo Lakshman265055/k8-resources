@@ -13,4 +13,7 @@ spec:
             name: nginx-config
             key: course
       - name: duration
-        value: "120hr"
+        valueFrom:
+          configMapKeyRef:
+            name: nginx-config
+            key: duration
