@@ -1,3 +1,27 @@
+# apiVersion: apps/v1
+# kind: ReplicaSet
+# metadata:
+#   name: nginx
+#   labels:
+#     app: nginx
+#     tier: frontend
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       tier: frontend
+#       app: nginx
+# template:
+#   metadata:
+#     labels:
+#       tier: frontend
+#       app: nginx   
+#   spec:
+#    containers:
+#    - name: nginx
+#      image: nginx
+
+
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -11,12 +35,12 @@ spec:
     matchLabels:
       tier: frontend
       app: nginx
-template:
-  metadata:
-    labels:
-      tier: frontend
-      app: nginx   
-  spec:
-   containers:
-   - name: nginx
-     image: nginx
+  template:
+    metadata:
+      labels:
+        tier: frontend
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
