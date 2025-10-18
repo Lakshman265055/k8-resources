@@ -50,7 +50,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nginx
-  namespace: expense
 spec:
  type: LoadBalancer
  selector:
